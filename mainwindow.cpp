@@ -22,6 +22,9 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(trem2,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
 
 
+    //Inicia as threads automaticamente ao abrir a janela
+    trem1->start();
+    trem2->start();
 
 }
 
@@ -42,22 +45,4 @@ void MainWindow::updateInterface(int id, int x, int y){
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-/*
- * Ao clicar, trens começam execução
- */
-void MainWindow::on_pushButton_clicked()
-{
-    trem1->start();
-    trem2->start();
-}
-
-/*
- * Ao clicar, trens param execução
- */
-void MainWindow::on_pushButton_2_clicked()
-{
-    trem1->terminate();
-    trem2->terminate();
 }
