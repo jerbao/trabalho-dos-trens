@@ -16,10 +16,12 @@ public:
     Trem(int,int,int);  //construtor
     void run();         //função a ser executada pela thread
 
-
 //Cria um sinal
 signals:
     void updateGUI(int,int,int);
+
+public slots:
+    void setVelocidade(int);
 
 private:
    int x;           //posição X do trem na tela

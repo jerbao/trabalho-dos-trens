@@ -24,8 +24,7 @@ private:
     Ui::MainWindow *ui;
 
     //Cria os objetos TREM's
-    Trem *trem1;
-    Trem *trem2;
+    Trem *trem[6];
 };
 
 #endif // MAINWINDOW_H
